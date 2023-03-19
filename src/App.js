@@ -13,7 +13,11 @@ import Container from './components/Container';
 import Nav from './components/Nav';
 import NotHere from './components/NotHere';
 
-const App = () => (
+const App = () => {
+  const apiKey = process.env.REACT_APP_API_KEY;
+  console.log(apiKey)
+  return (
+
   
   <BrowserRouter>
     <div className="container">
@@ -29,7 +33,7 @@ const App = () => (
       </Switch> 
     </div>
   </BrowserRouter>
-)
+)};
 
 export default App;
 

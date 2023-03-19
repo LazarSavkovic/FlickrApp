@@ -1,10 +1,11 @@
 import React from 'react';
-import apiKey from '../config'
 import { NavLink } from 'react-router-dom';
 import SearchForm from './SearchForm';
 
-const Nav = props => (
-
+const Nav = props => {
+	const apiKey = process.env.REACT_APP_API_KEY;
+	return (
+	
   <header>
   	{ (props.location.pathname.startsWith('/search') )
   		? <SearchForm props={props} apiKey={apiKey} />
@@ -18,5 +19,5 @@ const Nav = props => (
 	  </ul>
     </nav>
   </header>
-);
+)};
 export default Nav;
